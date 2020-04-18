@@ -34,8 +34,32 @@ public class LinkedList
         } else {
             Node curr = head;
             while (curr != null) {
-                log.info(head.getData() + " ");
+                log.info(curr.getData() + " ");
                 curr = curr.getNext();
+            }
+        }
+    }
+
+    public void reverse()
+    {
+        if (head == null) {
+            return;
+        }
+
+        if (head.getNext() == null) {
+            return;
+        }
+
+        Node prev = null, curr = head, next = head.getNext();
+        while (true) {
+            curr.setNext(prev);
+            prev = curr;
+            curr = next;
+            if (next != null) {
+                next = next.getNext();
+            } else {
+                head = prev;
+                return;
             }
         }
     }

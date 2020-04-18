@@ -9,6 +9,12 @@ public class SystemApplication
 {
     public static void main(String[] args)
     {
+        SystemApplication systemApplication = new SystemApplication();
+        systemApplication.run();
+    }
+
+    private void run()
+    {
         log.info("Running DSWithJava");
 
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
