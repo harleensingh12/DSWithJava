@@ -1,6 +1,6 @@
-package com.harleensingh12.dswithjava.runnable;
+package com.harleensingh12.dsWithJava.runnable;
 
-import com.harleensingh12.dswithjava.common.linkedlist.LinkedList;
+import com.harleensingh12.dsWithJava.common.linkedList.LinkedList;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,11 +19,13 @@ public class ReverseLinkedList implements Runnable
         log.info("Print ll");
         ll.print();
         log.info("Reverse ll");
-        ll.reverse();
+//        ll.reverse2(ll.getHead());
+        ll.reverseRecursive(ll.getHead());
         log.info("Print ll");
         ll.print();
         log.info("Reverse ll");
-        ll.reverse();
+//        ll.reverse2(ll.getHead());
+        ll.reverseRecursive(ll.getHead());
         log.info("Print ll");
         ll.print();
     }

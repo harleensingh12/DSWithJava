@@ -4,7 +4,7 @@ plugins {
     id "io.freefair.lombok" version "5.0.0"
 }
 
-mainClassName = 'com.harleensingh12.dswithjava.SystemApplication'
+mainClassName = 'com.harleensingh12.dsWithJava.SystemApplication'
 
 group 'com.harleensingh12.dswithjava'
 version '1.0-SNAPSHOT'

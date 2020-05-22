@@ -1,4 +1,4 @@
-package com.harleensingh12.dswithjava.common.linkedlist;
+package com.harleensingh12.dsWithJava.common.linkedList;
 
 import lombok.Builder;
 import lombok.Data;
@@ -61,6 +61,49 @@ public class LinkedList
                 head = prev;
                 return;
             }
+        }
+    }
+
+    public void reverse2(Node head)
+    {
+        if (head == null) {
+            return;
+        }
+
+        Node prev = null, curr = head, next = null;
+        while (curr != null) {
+            next = curr.getNext();
+
+            curr.setNext(prev);
+
+            prev = curr;
+            curr = next;
+        }
+
+        this.head = prev;
+    }
+
+    public void reverseRecursive(Node head)
+    {
+        if (head == null) {
+            return;
+        } else {
+            this.head = reverseRecursiveUtil(head);
+        }
+    }
+
+    private Node reverseRecursiveUtil(Node head)
+    {
+        if (head == null || head.getNext() == null) {
+            return head;
+        } else {
+            Node newHead = reverseRecursiveUtil(head.getNext());
+
+            Node prevHeadNext = head.getNext();
+            head.setNext(null);
+            prevHeadNext.setNext(head);
+
+            return newHead;
         }
     }
 }
